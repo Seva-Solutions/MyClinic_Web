@@ -9,8 +9,8 @@ import GoogleCalendar from '../googleCalendar';
 
 const App = () => (
     <Router>
-        <div>
-            <Route path={ROUTES.CALENDAR} component={GoogleCalendar} />
+        <div style={{marginTop:50}}>
+            <Route  path={ROUTES.CALENDAR} component={GoogleCalendar} />
         </div>
     </Router>
 );

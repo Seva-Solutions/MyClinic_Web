@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import WeekView from './weekView';
 import CalendarEventHandler from './calendarEventHandler';
-
+import Navbar from '../Navbar/index'
 class GoogleCalendar extends Component {
   constructor (props) {
     super (props);
@@ -70,14 +70,17 @@ class GoogleCalendar extends Component {
   };
 
   render () {
+   
     const {events} = this.state;
     return (
+     
       <WeekView
         events={events}
         onNewEvent={this.addNewEvent}
         onEventUpdate={this.updateEvent}
         onEventDelete={this.deleteEvent}
       />
+     
     );
   }
 }

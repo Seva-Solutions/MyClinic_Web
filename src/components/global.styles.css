@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @import "~antd/dist/antd.css";
 
 body {
@@ -10,7 +10,7 @@ body {
 .anticon.anticon-cross-circle.ant-calendar-picker-clear {
   display: none;
 }
-=======
+
 .btn {
     background-color: #4CAF50;
     border: none;
@@ -23,4 +23,4 @@ body {
     margin: 4px 2px;
     cursor: pointer;
   }
->>>>>>> 7bc823b8c837c4a0fb7b0f9bd051433d56cead5d
+

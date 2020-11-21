@@ -1,0 +1,326 @@
+.header{
+    position: absolute;
+    left: 44.02%;
+    right: 43.87%;
+    top: 0%;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+    color: #555555;
+}
+
+.cross{
+    position: absolute;
+    right: 0%;
+    top: 0%;    
+    background: #FFFFFF;  
+    cursor: pointer;
+}
+
+.box{
+    position: absolute;
+    width: 702px;
+    height: 640px;
+    top: 0%;
+    margin-left: 0%;
+    background: #FFFFFF;
+    border-radius: 16px;
+    direction: ltr;
+}
+
+.para {
+    position: absolute;
+    left: 10.54%;
+    right: 10.54%;
+    top: 7.06%;    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #555555;
+    direction: ltr;
+}
+
+.rectangle{
+    position: absolute;
+    width: 622px;
+    height: 288px;
+    left: 40px;
+    top: 140px;  
+}
+
+.google{
+    position: absolute;
+    left: 12px;
+    width: 600px;
+    height: 60px;
+    top: 0px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    cursor: pointer;
+}
+
+.apple{
+    position: absolute;
+    left: 12px;
+    width: 600px;
+    height: 60px;
+    top: 85px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    cursor: pointer;
+}
+
+.logo{
+    position: absolute;
+    left: 31.05%;
+    right: 70%;
+    top: 20%;
+    bottom: 60%;
+    height: 40px;
+}
+
+.signupgoogle{
+    position: absolute;
+    left: 40.88%;
+    right: 36.32%;
+    top: 50.31%;
+    bottom: 45.94%;
+
+    font-family: Red hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #555555;
+}
+
+.signupapple{
+    position: absolute;
+    left: 41.88%;
+    right: 37.18%;
+    top: 66.56%;
+    bottom: 29.69%;
+
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #555555;
+}
+
+.line1{
+    position: absolute;
+    width: 240px;
+    height: 0px;
+    left: 12px;
+    top: 110px;
+
+    background: #2B64D2;
+
+    border: 1px solid #2B64D2;   
+}
+
+.or{
+    position: absolute;
+    width: 17px;
+    height: 24px;
+    left: 300px;
+    top: 105px;
+    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+
+    text-align: center;
+
+    color: #2B64D2;   
+}
+
+.line2{
+    position: absolute;
+    width: 250px;
+    height: 0px;
+    left: 355px;
+    top: 110px;
+    
+    /* Primary colour */
+    
+    background: #2B64D2;
+    /* Primary colour */
+    
+    border: 1px solid #2B64D2;
+}
+
+.email{
+    position: absolute;
+    width: 44px;
+    height: 24px;
+    left: 12px;
+    top: 140px;
+    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    /* Gray 1 */
+    
+    color: #333333;
+}
+
+.password{
+    position: absolute;
+    width: 76px;
+    height: 24px;
+    left: 12px;
+    top: 260px;
+    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: left;
+    
+    /* Gray 1 */
+    
+    color: #333333;   
+}
+
+.rectangle1{
+    position: absolute;
+    left: 0px;
+    width: 620px;
+    height: 60px;
+    top: 170px;
+    
+}
+
+.input1{
+    position: absolute;
+    left: 12px;
+    width: 600px;
+    height: 60px;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    /* identical to box height */
+    background: #EEEEEE;
+    border: 1px solid #555555;
+
+    /* Secondary text */
+
+    color: #555555;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rectangle2{
+    position: absolute;
+    left: 0px;
+    width: 611px;
+    height: 60px;
+    top: 290px;
+}
+
+.input2{
+    position: absolute;
+    left: 12px;
+    width: 600px;
+    height: 60px;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    /* identical to box height */
+    background: #EEEEEE;
+    border: 1px solid #555555;
+
+    /* Secondary text */
+
+    color: #555555;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loginbutton{
+    width: 250px;
+    height: 40px;
+    top: 410px;
+    left: 190px;
+    text-align: center;
+}
+
+.login{
+    position: relative;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.text2{
+    position: absolute;
+    left: 210px;
+    top: 450px;
+    height: 24px;
+    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    text-align: center;
+    direction: ltr;
+    color: #555555;    
+}
+
+.signup{
+    position: absolute;
+    left: 390px;
+    top: 450px;
+    height: 24px;
+    
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    
+    color: #2B64D2;
+}

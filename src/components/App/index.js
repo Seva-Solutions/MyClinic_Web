@@ -6,11 +6,13 @@ import {
 import * as ROUTES from '../../constants/routes';
 // import ElevateAppBar from '../components/Navbar/index'
 import GoogleCalendar from '../googleCalendar';
+import NotFound from '../Notfound/pageNotFound'
 
 const App = () => (
     <Router>
         <div style={{marginTop:50}}>
             <Route  path={ROUTES.CALENDAR} component={GoogleCalendar} />
+            <Route  path={ROUTES.NOTFOUND} component={NotFound} />
         </div>
     </Router>
 );

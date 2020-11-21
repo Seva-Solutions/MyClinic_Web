@@ -1,54 +1,62 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
+// import { green, purple } from '@material-ui/core/colors';
 
-function ElevationScroll(props) {
-  const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined,
-  });
 
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
+const useStyles = makeStyles((theme) => ({
+root: {
+    flexGrow: 1,
+},
+menuButton: {
+    marginRight: theme.spacing(2),
+},
+title: {
+    flexGrow: 1,
+    color: '#0DAC99',
+    fontSize: '30px',
+    fontFamily: 'quicksand',
+    fontWeight: 500,
+},
+signUpBtn :{
+    backgroundColor: '#0DAC99',
+    textTransform: 'none',
+    fontSize: '18px',
+},signInBtn :{
+    textTransform: 'none',
+    fontSize: '18px',
 }
+}));
 
-ElevationScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
+// const ContinueButton = withStyles((theme) => ({
+// root: {
+//     color: theme.palette.getContrastText(purple[600]),
+//     borderRadius:44,
+//     backgroundColor: '#0DAC99',
+//     '&:hover': {
+//     backgroundColor: '#003ba0',
+//     },
+// },
+// }))(Button);
 
-export default function ElevateAppBar(props) {
-  return (
-    <React.Fragment>
-      <CssBaseline />
-      <ElevationScroll {...props}>
-        <AppBar style={{backgroundColor: 'white'}}>
-          <Toolbar>
-            <Typography style={{color: '#29EBD4'}}variant="h4">MyClinic</Typography>
-          </Toolbar>
-        </AppBar>
-      </ElevationScroll>
-      <Toolbar />
-                    <Container>
+export default function ButtonAppBar() {
+const classes = useStyles();
 
-                        {/* add components here?? */}
-                    </Container>
-    </React.Fragment>
-  );
+return (
+    <div >
+    <AppBar style={{backgroundColor: 'white'}}>
+        <Toolbar >
+        <Typography className={classes.title}>
+            MyClinic
+        </Typography>
+        
+        <Button variant="h3" className={classes.signInBtn}>Sign In</Button>
+        <Button variant="h3" className={classes.signUpBtn}>Sign Up</Button>
+        </Toolbar>
+    </AppBar>
+    </div>
+);
 }

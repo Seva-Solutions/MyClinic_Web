@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './components/Navbar/index'
-
-
+import App from './components/App'; 
+import './components/global.styles.css';
 
 ReactDOM.render(
-    <Navbar />,
+    <App />,
   document.getElementById('root')
 );
+

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App'; 
 import './components/global.styles.css';
-import Navbar from './components/Navbar/index'
+import Navbar from './components/Navbar/loggedNavbar'
 ReactDOM.render(
   <div>
     <Navbar />

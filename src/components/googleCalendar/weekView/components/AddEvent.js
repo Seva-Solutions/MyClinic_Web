@@ -11,7 +11,7 @@ function AddEvent (props) {
       <Input
         type="text"
         placeholder="Add Title"
-        value={props.title}
+        defaultvalue={props.title}
         style={inputStyles}
         size="large"
         autoFocus={true}
@@ -24,7 +24,7 @@ function AddEvent (props) {
         showTime={{
           format: 'HH:mm',
           hourStep: 1,
-          minuteStep: 30,
+          minuteStep: 15,
           defaultValue: [moment (props.start), moment (props.end)],
         }}
         format="MMM Do, YYYY hh:mm a"

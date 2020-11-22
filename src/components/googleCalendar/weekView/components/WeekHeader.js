@@ -20,7 +20,7 @@ function WeekHeader (props) {
           style={
             isTodaysDate (day.dateStamp)
               ? {...col, ...weekDays, ...lightHighlighter}
-              : {...col, ...weekDays}
+              : {...col, ...weekDays, ...lightHighlighter}
           }
         >
           <p style={weekDayName}>{day.weekDayName}</p>

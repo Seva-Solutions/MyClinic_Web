@@ -10,9 +10,9 @@ import NotFound from '../Notfound/pageNotFound'
 
 const App = () => (
     <Router>
-        <div style={{marginTop:50}}>
+        <div style={{marginTop:-50}}>
             <Route  path={ROUTES.CALENDAR} component={GoogleCalendar} />
-            <Route  path={ROUTES.NOTFOUND} component={NotFound} />
+            {/* <Route  path={ROUTES.NOTFOUND} component={NotFound} /> */}
         </div>
     </Router>
 );

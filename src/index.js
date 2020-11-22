@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './components/App'; 
 import './components/global.styles.css';
 import Sidebar from './components/Sidebar/index.js'
+import Firebase, { FirebaseContext } from './components/Firebase';
+
 ReactDOM.render(
-  <div>
-    {/* <Sidebar  /> */}
-    {/* <Navbar /> */}
+  <FirebaseContext.Provider value={new Firebase()}>
     <App />
-  </div>,
-    
+  </FirebaseContext.Provider>,
   document.getElementById('root')
 );
 

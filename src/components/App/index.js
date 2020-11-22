@@ -12,6 +12,7 @@ import Landing from '../Home';
 import NotFound from '../Notfound/pageNotFound'
 import Sidebar from '../Sidebar/index'
 
+
 const App = () => (
     <Router>
         <Sidebar/>
@@ -23,7 +24,6 @@ const App = () => (
             <Route exact path="/">
                 <Redirect to="/Landing" />
             </Route>
-
         </div>
     </Router>
 );

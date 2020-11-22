@@ -8,16 +8,18 @@ import * as ROUTES from '../../constants/routes';
 import GoogleCalendar from '../googleCalendar';
 import SignIn from '../Login'; 
 import Landing from '../Home'; 
-import ButtonAppBar from "../Navbar";
+
+import NotFound from '../Notfound/pageNotFound'
+import Sidebar from '../Sidebar/index'
 
 const App = () => (
     <Router>
-            <ButtonAppBar/>
-
-        <div style={{marginTop:-50}}>
+        <Sidebar/>
+        <div style={{marginTop:-160}}>
             <Route path={ROUTES.CALENDAR} component={GoogleCalendar} />
             <Route path={ROUTES.LOGIN} component={SignIn} />
             <Route path={ROUTES.LANDING} component={Landing} />
+            {/* <Route path={ROUTES.SIDEBAR} component={Sidebar} /> */}
             <Route exact path="/">
                 <Redirect to="/Landing" />
             </Route>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styles from './index.module.css';
 // import Review from "../Review";
-import Popup from "reactjs-popup";
+// import Popup from "reactjs-popup";
 
 
 const Footer = () => (

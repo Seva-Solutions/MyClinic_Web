@@ -12,6 +12,7 @@ import Landing from '../Home';
 import NotFound from '../Notfound/pageNotFound'
 import Sidebar from '../Sidebar/index'
 import Footer from '../Footer/footer.js'
+import Patients from '../Patients/patients.js'
 
 const App = () => (
     
@@ -22,6 +23,7 @@ const App = () => (
             <Route path={ROUTES.CALENDAR} component={GoogleCalendar} />
             <Route path={ROUTES.LOGIN} component={SignIn} />
             <Route path={ROUTES.LANDING} component={Landing} />
+            <Route path={ROUTES.PATIENT} component={Patients} />
             {/* <Route path={ROUTES.SIDEBAR} component={Sidebar} /> */}
             <Route exact path="/">
                 <Redirect to="/Landing" />

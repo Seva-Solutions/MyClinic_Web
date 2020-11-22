@@ -2,11 +2,11 @@
     position: absolute;
     left: 44.02%;
     right: 43.87%;
-    top: 0%;
+    top: 5%;
     font-family: Red Hat Display;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 32px;
     text-align: center;
 
@@ -15,16 +15,16 @@
 
 .cross{
     position: absolute;
-    right: 0%;
-    top: 0%;    
+    right: 10px;
+    top: 10px;    
     background: #FFFFFF;  
     cursor: pointer;
 }
 
 .box{
     position: absolute;
-    width: 702px;
-    height: 640px;
+    width: 700px;
+    height: 600px;
     top: 0%;
     margin-left: 0%;
     background: #FFFFFF;
@@ -52,7 +52,7 @@
     width: 622px;
     height: 288px;
     left: 40px;
-    top: 140px;  
+    top: 100px;  
 }
 
 .google{
@@ -90,15 +90,10 @@
 
 .signupgoogle{
     position: absolute;
-    left: 40.88%;
-    right: 36.32%;
-    top: 50.31%;
-    bottom: 45.94%;
-
-    font-family: Red hat Display;
+    margin-top:0px;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 24px;
     text-align: center;
 
@@ -129,7 +124,7 @@
     width: 240px;
     height: 0px;
     left: 12px;
-    top: 110px;
+    top: 95px;
 
     background: #2B64D2;
 
@@ -141,7 +136,7 @@
     width: 17px;
     height: 24px;
     left: 300px;
-    top: 105px;
+    top: 90px;
     
     font-family: Red Hat Display;
     font-style: normal;
@@ -159,7 +154,7 @@
     width: 250px;
     height: 0px;
     left: 355px;
-    top: 110px;
+    top: 95px;
     
     /* Primary colour */
     
@@ -195,7 +190,7 @@
     width: 76px;
     height: 24px;
     left: 12px;
-    top: 260px;
+    top: 225px;
     
     font-family: Red Hat Display;
     font-style: normal;
@@ -214,7 +209,7 @@
     position: absolute;
     left: 0px;
     width: 620px;
-    height: 60px;
+    height: 40px;
     top: 170px;
     
 }
@@ -223,7 +218,7 @@
     position: absolute;
     left: 12px;
     width: 600px;
-    height: 60px;
+    height: 40px;
     font-family: Red Hat Display;
     font-style: normal;
     font-weight: normal;
@@ -245,15 +240,15 @@
     position: absolute;
     left: 0px;
     width: 611px;
-    height: 60px;
-    top: 290px;
+    height: 40px;
+    top: 255px;
 }
 
 .input2{
     position: absolute;
     left: 12px;
     width: 600px;
-    height: 60px;
+    height: 40px;
     font-family: Red Hat Display;
     font-style: normal;
     font-weight: normal;
@@ -273,8 +268,8 @@
 
 .loginbutton{
     width: 250px;
-    height: 40px;
-    top: 410px;
+    height: 60px;
+    top: 330px;
     left: 190px;
     text-align: center;
 }
@@ -294,7 +289,7 @@
 .text2{
     position: absolute;
     left: 210px;
-    top: 450px;
+    top: 425px;
     height: 24px;
     
     font-family: Red Hat Display;
@@ -312,7 +307,7 @@
 .signup{
     position: absolute;
     left: 390px;
-    top: 450px;
+    top: 425px;
     height: 24px;
     
     font-family: Red Hat Display;

@@ -9,6 +9,8 @@ class EventHighlighter extends Component {
     showEditEventModal: false,
     eventNewStart: null,
     eventNewEnd: null,
+    greyedOut: false,
+    backgroundColor: '#29EBD4',
   };
 
   /**
@@ -45,6 +47,7 @@ class EventHighlighter extends Component {
       showEditEventModal: true,
       eventNewStart: this.props.event.start,
       eventNewEnd: this.props.event.end,
+      backgroundColor: "#CBF6FF",
     });
   };
 
@@ -75,7 +78,7 @@ class EventHighlighter extends Component {
       <React.Fragment>
         <AddEventModal
           editMode={true}
-          eventTitle={this.props.event.title}
+          eventTitle={this.props.event.type}
           visible={showEditEventModal}
           onCancel={this.deleteEvent}
           onClose={this.closeModal}
@@ -92,6 +95,7 @@ class EventHighlighter extends Component {
               this.props.startDate
             ),
             ...eventHighlighter,
+            backgroundColor: this.state.backgroundColor,
           }}
         >
           {this.props.event.title} <br />

@@ -24,12 +24,12 @@ export const getAllDaysInTheWeek = (currentDate = moment ()) => {
 
 // All the hours in the day
 export const times = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
+  // 1,
+  // 2,
+  // 3,
+  // 4,
+  // 5,
+  // 6,
   7,
   8,
   9,
@@ -49,6 +49,49 @@ export const times = [
   23,
 ];
 
+export const appointments = [
+  {
+      "clinic_id": 10001,
+      "ohip_id": "3695-420-235-PQ",
+      "cpso_id": 564378,
+      "type": "full checkup",
+      "start": "10:00",
+      "date": "2020-11-21"
+  },
+  {
+      "clinic_id": 10001,
+      "ohip_id": "2208-001-209-MS",
+      "cpso_id": 107896,
+      "type": "prescription refill",
+      "start": "11:00",
+      "date": "2020-11-21"
+  },
+  {
+      "clinic_id": 33070,
+      "ohip_id": "8734-489-567-BS",
+      "cpso_id": 100013,
+      "type": "vitals checkup",
+      "start": "12:00",
+      "date": "2020-11-19"
+  },
+  {
+      "clinic_id": 33070,
+      "ohip_id": "0000-000-000-AA",
+      "cpso_id": 420169,
+      "type": "general consultation",
+      "start": "13:00",
+      "date": "2020-11-19"
+  },
+  {
+      "clinic_id": 22101,
+      "ohip_id": "1299-630-187-AK",
+      "cpso_id": 246710,
+      "type": "vaccination",
+      "start": "16:15",
+      "end": "16:45",
+      "date": "2020-11-19"
+  }
+];
 /**
    * Generated coordinated for the highlight
    * @param {Object} event - Event object
@@ -67,8 +110,8 @@ export const times = [
    * }
   */
 export const generateWeekViewCoordinates = (event, startDate) => {
-  const start = moment (event.start);
-  const end = moment (event.end);
+  const start = moment (event.date+' '+event.start, 'YYYY-MM-DD h:mm');
+  const end = moment (event.date+' '+event.end, 'YYYY-MM-DD h:mm');
   const duration = moment.duration (end.diff (start));
   const weekStart = moment (startDate);
 
@@ -80,10 +123,11 @@ export const generateWeekViewCoordinates = (event, startDate) => {
   const height = timeFactor * 100;
 
   let left, width;
-  if (weekStart.week () === start.week ()) {
+  // debugger;
+  // if (weekStart.week () === start.week ()) {
     const weekDay = start.weekday ();
     left = (weekDay + 1) * 12.5;
-  }
+  // }
 
   if (
     weekStart.week () === start.week () &&
@@ -107,9 +151,9 @@ export const generateWeekViewCoordinates = (event, startDate) => {
     width = (daysDiff + 1) * 12.5 - 2;
   }
 
-  if (weekStart.week () > start.week ()) {
-    left = 12.5;
-  }
+  // if (weekStart.week () > start.week ()) {
+  //   left = 12.5;
+  // }
 
   if (weekStart.week () < end.week ()) {
     width = 100 - left;

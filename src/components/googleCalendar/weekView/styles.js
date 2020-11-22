@@ -97,10 +97,14 @@ export const eventHighlighter = {
   borderRadius: '3px',
   color: 'black',
   fontWeight: 'bold',
-  padding: '.6px 2px',
+
+  padding: '.5px 2px',
   fontSize: '5px',
   zIndex: 1,
   cursor: 'pointer',
-  borderRadius: '12px',
+  borderRadius: '15px',
   textAlign: 'center',
+  paddingTop: 5
+
 };
+

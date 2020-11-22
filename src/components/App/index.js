@@ -10,6 +10,7 @@ import SignIn from '../Login';
 import Landing from '../Home'; 
 import ButtonAppBar from "../Navbar";
 
+
 const App = () => (
     <Router>
             <ButtonAppBar/>
@@ -21,7 +22,6 @@ const App = () => (
             <Route exact path="/">
                 <Redirect to="/Landing" />
             </Route>
-
         </div>
     </Router>
 );

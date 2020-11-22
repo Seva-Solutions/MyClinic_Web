@@ -22,7 +22,7 @@ export const container = {
 export const weekDates = {
   fontSize: 40,
   lineHeight: '12px',
-  color: '#9e9e9e',
+  color: 'black',
   marginLeft: 10,
 };
 
@@ -54,7 +54,7 @@ export const toolbar = {
 export const toolbarDate = {
   fontSize: 20,
   fontWeight: 400,
-  opacity: 0.54,
+  opacity: 0.7,
   lineHeight: '30px',
   textAlign: 'right',
 };
@@ -91,11 +91,16 @@ export const lightHighlighter = {
 export const eventHighlighter = {
   position: 'absolute',
   backgroundColor: '#29EBD4',
-  border: '1px solid #29aBff',
-  borderRadius: '4px',
+  //#29aBff
+  width:'11.5%',
+  border: '1px solid black',
+  borderRadius: '3px',
   color: 'black',
-  padding: '2px 4px',
-  fontSize: '12px',
+  fontWeight: 'bold',
+  padding: '.6px 2px',
+  fontSize: '5px',
   zIndex: 1,
   cursor: 'pointer',
+  borderRadius: '12px',
+  textAlign: 'center',
 };

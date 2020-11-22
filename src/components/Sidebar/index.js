@@ -18,6 +18,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import AccountInfo from '../AccountInfo/accountInfo'
 import Brightness1Icon from '@material-ui/icons/Brightness1';
 import { Link, withRouter, BrowserRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import SignIn from '../Login';
+import Popup from "reactjs-popup";
 
 const drawerWidth = 240;
 
@@ -117,6 +120,14 @@ export default function PersistentDrawerLeft() {
     setOpen(true);
   };
 
+  const contentStyle2 = {
+    width: '702px',
+    height: '650px',
+    background: '#FFFFFF',
+    borderRadius: '16px', 
+    marginTop: '90px'
+};
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
@@ -147,7 +158,12 @@ export default function PersistentDrawerLeft() {
         <Typography title className={classes.appointmenttitle}>
             Appointment Management
         </Typography>
-        <AccountInfo />
+        {/* <AccountInfo /> */}
+        <Popup trigger={<Button variant="h3" className={classes.signInBtn}>Sign In</Button>} 
+                modal contentStyle={contentStyle2}>
+                  {close => <SignIn close={close} />}
+        </Popup>
+        <Button variant="h3" className={classes.signUpBtn}>Sign Up</Button>
         </Toolbar>
        
       </AppBar>

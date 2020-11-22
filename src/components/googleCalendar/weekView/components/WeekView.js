@@ -5,7 +5,7 @@ import WeekToolbar from './WeekToolbar';
 import WeekHeader from './WeekHeader';
 import TimeSlotGroup from './TimeSlotGroup';
 import EventHighlighter from './EventHighlighter';
-import {times, getAllDaysInTheWeek} from '../../utils';
+import {times, appointments, getAllDaysInTheWeek} from '../../utils';
 import {container} from '../styles';
 
 class WeekView extends Component {
@@ -100,6 +100,19 @@ class WeekView extends Component {
     });
   };
 
+  appointmentsByTime = (appointments) => {
+    const out = {}
+    appointments.forEach((appointment, index, array) => {
+      // debugger;
+      const start = appointment['start'].split(':')[0];
+      out[parseInt(start)] = out[parseInt(start)] || []
+      out[parseInt(start)].push(appointment);
+    });
+
+    // debugger;
+    return out;
+  }
+
   render () {
     const {
       weekDays,
@@ -108,7 +121,8 @@ class WeekView extends Component {
       eventEnd,
       startDate,
     } = this.state;
-    const {events} = this.props;
+    // const {events} = this.props;
+    const {events} = appointments;
     return (
       <div style={container}>
 
@@ -136,14 +150,15 @@ class WeekView extends Component {
             key={time}
             time={time}
             weekDays={weekDays}
-            events={events[time]}
+            events={this.appointmentsByTime(appointments)[time]}
             openAddEventModal={this.openAddEventModal}
           >
-            {events[time] &&
-              events[time].map (
+            {this.appointmentsByTime(appointments)[time] &&
+              this.appointmentsByTime(appointments)[time].map (
                 event =>
-                  event.startWeek <= moment (startDate).week () &&
-                  event.endWeek >= moment (startDate).week () &&
+                  // moment(event.date+' '+event.start, 'YYYY-MM-DD h:mm').startWeek <= moment (startDate).week() &&
+                  // event.startWeek <= moment (startDate).week () &&
+                  // event.endWeek >= moment (startDate).week () &&
                   <EventHighlighter
                     onEventDelete={this.props.onEventDelete}
                     onEventUpdate={this.props.onEventUpdate}

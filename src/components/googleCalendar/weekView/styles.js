@@ -97,6 +97,7 @@ export const eventHighlighter = {
   borderRadius: '3px',
   color: 'black',
   fontWeight: 'bold',
+
   padding: '.5px 2px',
   fontSize: '5px',
   zIndex: 1,
@@ -106,3 +107,4 @@ export const eventHighlighter = {
   paddingTop: 5
 
 };
+

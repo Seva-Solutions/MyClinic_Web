@@ -56,7 +56,8 @@ export const appointments = [
       "cpso_id": 564378,
       "type": "full checkup",
       "start": "10:00",
-      "date": "2020-11-21"
+      "end": "16:45",
+      "date": "2020-11-20"
   },
   {
       "clinic_id": 10001,
@@ -64,6 +65,7 @@ export const appointments = [
       "cpso_id": 107896,
       "type": "prescription refill",
       "start": "11:00",
+      "end": "16:45",
       "date": "2020-11-21"
   },
   {
@@ -72,14 +74,16 @@ export const appointments = [
       "cpso_id": 100013,
       "type": "vitals checkup",
       "start": "12:00",
-      "date": "2020-11-19"
+      "end": "16:45",
+      "date": "2020-11-18"
   },
   {
       "clinic_id": 33070,
       "ohip_id": "0000-000-000-AA",
       "cpso_id": 420169,
       "type": "general consultation",
-      "start": "13:00",
+      "start": "10:00",
+      "end": "12:45",
       "date": "2020-11-19"
   },
   {

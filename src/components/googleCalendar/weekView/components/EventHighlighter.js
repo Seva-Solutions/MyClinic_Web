@@ -99,13 +99,13 @@ class EventHighlighter extends Component {
             backgroundColor: this.state.backgroundColor,
           }}
         >
-          {this.props.event.title} <br />
+          {/* {this.props.event.title} <br /> */}
           <span style={{fontSize: 10}}>
-            {moment (this.props.event.start).format ('hh:mm a')}
+          {moment (this.props.event.start, 'h:mm').format ('hh:mm a')}
             {' '}
             -
             {' '}
-            {moment (this.props.event.end).format ('hh:mm a')}
+          {moment (this.props.event.end, 'h:mm').format ('hh:mm a')}
           </span>
         </div>
       </React.Fragment>

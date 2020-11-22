@@ -4,6 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import SignIn from '../Login';
+import Popup from "reactjs-popup";
+
+
 // import { green, purple } from '@material-ui/core/colors';
 
 
@@ -31,16 +35,13 @@ signUpBtn :{
 }
 }));
 
-// const ContinueButton = withStyles((theme) => ({
-// root: {
-//     color: theme.palette.getContrastText(purple[600]),
-//     borderRadius:44,
-//     backgroundColor: '#0DAC99',
-//     '&:hover': {
-//     backgroundColor: '#003ba0',
-//     },
-// },
-// }))(Button);
+const contentStyle2 = {
+    width: '702px',
+    height: '650px',
+    background: '#FFFFFF',
+    borderRadius: '16px', 
+    marginTop: '90px'
+};
 
 export default function ButtonAppBar() {
 const classes = useStyles();
@@ -53,7 +54,11 @@ return (
             MyClinic
         </Typography>
         
-        <Button variant="h3" className={classes.signInBtn}>Sign In</Button>
+        <Popup trigger={<Button variant="h3" className={classes.signInBtn}>Sign In</Button>} 
+                modal contentStyle={contentStyle2}>
+                  {close => <SignIn close={close} />}
+        </Popup>
+
         <Button variant="h3" className={classes.signUpBtn}>Sign Up</Button>
         </Toolbar>
     </AppBar>

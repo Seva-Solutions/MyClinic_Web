@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import WeekView from './weekView';
 import CalendarEventHandler from './calendarEventHandler';
-import Navbar from '../Navbar/index'
+
 class GoogleCalendar extends Component {
   constructor (props) {
     super (props);

@@ -85,15 +85,15 @@ export const weekButtons = {
 };
 
 export const lightHighlighter = {
-  backgroundColor: 'rgba(0,0,0,0.04)',
+  backgroundColor: 'rgba(222,243,255)',
 };
 
 export const eventHighlighter = {
   position: 'absolute',
-  backgroundColor: '#b3e1f7',
-  border: '1px solid #81cdf2',
+  backgroundColor: '#29EBD4',
+  border: '1px solid #29aBff',
   borderRadius: '4px',
-  color: 'white',
+  color: 'black',
   padding: '2px 4px',
   fontSize: '12px',
   zIndex: 1,

@@ -18,7 +18,7 @@ function WeekToolbar (props) {
         <Icon type="calendar" style={spacify} />Appointments
       </Col>
       <Col span={3} offset={8} style={alignRight}>
-        <Tooltip placement="topLeft" title={moment ().format ('dddd, MMM D')}>
+        <Tooltip placement="bottomLeft" title={moment ().format ('dddd, MMM D')}>
           <Button onClick={props.goToToday}>Today</Button>
         </Tooltip>
       </Col>

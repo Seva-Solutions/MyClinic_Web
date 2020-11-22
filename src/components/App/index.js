@@ -11,12 +11,14 @@ import Landing from '../Home';
 
 import NotFound from '../Notfound/pageNotFound'
 import Sidebar from '../Sidebar/index'
-
+import Footer from '../Footer/footer.js'
 
 const App = () => (
+    
     <Router>
+        
         <Sidebar/>
-        <div style={{marginTop:-160}}>
+        <div style={{marginTop:-50}}>
             <Route path={ROUTES.CALENDAR} component={GoogleCalendar} />
             <Route path={ROUTES.LOGIN} component={SignIn} />
             <Route path={ROUTES.LANDING} component={Landing} />
@@ -24,6 +26,7 @@ const App = () => (
             <Route exact path="/">
                 <Redirect to="/Landing" />
             </Route>
+            <Footer />
         </div>
     </Router>
 );

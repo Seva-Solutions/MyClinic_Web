@@ -120,6 +120,10 @@ class Login extends Component {
     }
   }
 
+  loginClicked(event){
+    window.location.href='/calendar'
+  }
+
   render() {
     return (
       <div className="container">

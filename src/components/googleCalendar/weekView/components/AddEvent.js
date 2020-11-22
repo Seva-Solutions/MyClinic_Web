@@ -8,7 +8,7 @@ const {RangePicker} = DatePicker;
 function AddEvent (props) {
   return (
     <React.Fragment>
-      <Input
+      {/* <Input
         type="text"
         placeholder="Add Title"
         defaultvalue={props.title}
@@ -16,8 +16,12 @@ function AddEvent (props) {
         size="large"
         autoFocus={true}
         onChange={props.onTitleChange}
-      />
-      <RangePicker
+      /> */}
+      <h1>{props.title}</h1>
+      <p>{props.date}</p> <p>{props.start}</p>
+      <p>OHIP: {props.ohip_id}</p>
+      <p>CPSO: {props.cpso_id}</p>
+      {/* <RangePicker
         style={{width: '100%'}}
         value={[moment (props.start), moment (props.end)]}
         onChange={props.onTimeChange}
@@ -28,7 +32,7 @@ function AddEvent (props) {
           defaultValue: [moment (props.start), moment (props.end)],
         }}
         format="MMM Do, YYYY hh:mm a"
-      />
+      /> */}
     </React.Fragment>
   );
 }

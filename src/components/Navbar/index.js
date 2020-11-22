@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import SignIn from '../Login';
 import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css';
 
 
 // import { green, purple } from '@material-ui/core/colors';
@@ -36,11 +37,11 @@ signUpBtn :{
 }));
 
 const contentStyle2 = {
-    width: '702px',
-    height: '650px',
+    width: '700px',
+    height: '600px',
     background: '#FFFFFF',
     borderRadius: '16px', 
-    marginTop: '90px'
+    marginTop: '80px',
 };
 
 export default function ButtonAppBar() {

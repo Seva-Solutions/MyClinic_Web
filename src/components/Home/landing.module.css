@@ -29,7 +29,7 @@
     width: 470px;
     height: 48px;
     left: 0px;
-    margin-top: -20px;;
+    margin-top: -30px;;
     order:0;
     font-style: normal;
     font-weight: 600;
@@ -68,7 +68,7 @@
     width: 397px;
     height: 113px;
     order: 1;
-    margin-top:140px;
+    margin-top:160px;
     display: grid;
     align-content: center;
     grid-template-columns: auto auto;

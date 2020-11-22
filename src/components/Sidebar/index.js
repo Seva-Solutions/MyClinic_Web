@@ -21,6 +21,7 @@ import { Link, withRouter, BrowserRouter } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import SignIn from '../Login';
 import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css';
 
 const drawerWidth = 240;
 
@@ -121,11 +122,11 @@ export default function PersistentDrawerLeft() {
   };
 
   const contentStyle2 = {
-    width: '702px',
-    height: '650px',
+    width: '700px',
+    height: '600px',
     background: '#FFFFFF',
     borderRadius: '16px', 
-    marginTop: '90px'
+    marginTop: '80px',
 };
 
   const handleDrawerClose = () => {

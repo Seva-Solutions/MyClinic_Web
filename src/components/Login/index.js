@@ -18,7 +18,6 @@ const SignIn = ({close}) => (
   <box className={styles.box}>
     <CloseOutlinedIcon style={{ height: 40, width: 40 }} className={styles.cross} onClick={close}/>
     <h1 className={styles.header}>Log in</h1>
-    <p className={styles.para}>Whether you're a contractor, homeowner or homebuilder, log in here!</p>
       <box className={styles.rectangle}>
         <div>
           <SignInGoogle />

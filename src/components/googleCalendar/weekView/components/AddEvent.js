@@ -19,8 +19,8 @@ function AddEvent (props) {
       /> */}
       <h1>{props.title}</h1>
       <p>{props.date}</p> <p>{props.start}</p>
-      <p>OHIP: {props.ohip_id}</p>
-      <p>CPSO: {props.cpso_id}</p>
+      <p>OHIP: {props.event.ohip_id}</p>
+      <p>CPSO: {props.event.cpso_id}</p>
       {/* <RangePicker
         style={{width: '100%'}}
         value={[moment (props.start), moment (props.end)]}

@@ -62,6 +62,7 @@ class AddEventModal extends Component {
           start={this.props.eventStart}
           end={this.props.eventEnd}
           onTimeChange={this.props.onTimeChange}
+          event={this.props.event}
         />
       </Modal>
     );

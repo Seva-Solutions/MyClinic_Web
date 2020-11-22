@@ -86,6 +86,7 @@ class EventHighlighter extends Component {
           eventStart={eventNewStart}
           eventEnd={eventNewEnd}
           onTimeChange={this.onCurrentEventTimeChange}
+          event={this.props.event}
         />
         <div
           onClick={this.openEditEventModal}

@@ -15,9 +15,10 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import AccountInfo from '../AccountInfo/accountInfo'
+import Brightness1Icon from '@material-ui/icons/Brightness1';
+import { Link, withRouter, BrowserRouter } from 'react-router-dom';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -166,22 +167,23 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          {[['Calendar' , '/calendar'], ['Patients' , '/patients'],['Settings' , '/settings']].map((values, index) => {
+            debugger
+            const text = values[0];
+            const link = values[1];
+            return (
+              <div>
+                <Link to={link} onClick={handleDrawerClose}>
+                    <ListItem button key={text} >
+                    <ListItemText primary={text} />
+                {index % 2 === 0 ? <Brightness1Icon  style={{color: "#0DAC99"}}/> : <Brightness1Icon  style={{color: "#0DAC99"}}/>}
+                    </ListItem>
+                </Link>
+              </div>             
+            );
+        })}
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <main
         className={clsx(classes.content, {

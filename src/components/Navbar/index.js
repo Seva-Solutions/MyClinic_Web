@@ -1,68 +1,57 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import SignIn from '../Login';
-import Popup from "reactjs-popup";
-import 'reactjs-popup/dist/index.css';
-
-
-// import { green, purple } from '@material-ui/core/colors';
-
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
-root: {
+  root: {
     flexGrow: 1,
-},
-menuButton: {
+    color:'white',
+  },
+  menuButton: {
     marginRight: theme.spacing(2),
-},
-title: {
+  },
+  title: {
     flexGrow: 1,
-    color: '#0DAC99',
-    fontSize: '30px',
-    fontFamily: 'quicksand',
-    fontWeight: 500,
-},
-signUpBtn :{
-    backgroundColor: '#0DAC99',
-    textTransform: 'none',
-    fontSize: '18px',
-},signInBtn :{
-    textTransform: 'none',
-    fontSize: '18px',
-}
+    color: window.$PrimaryColor,
+    fontWeight: 'bold',
+    fontFamily: window.$FontFamily,
+    cursor:'pointer',
+    textAlign:'center',
+    fontSize:'34px'
+  },
+  title1: {
+    flexGrow: 1,
+    color: window.$PrimaryColor,
+    fontWeight: 'bold',
+    fontFamily: window.$FontFamily,
+    cursor:'pointer',
+    textAlign:'start',
+    fontSize:'34px'
+  },
 }));
 
-const contentStyle2 = {
-    width: '700px',
-    height: '600px',
-    background: '#FFFFFF',
-    borderRadius: '16px', 
-    marginTop: '80px',
-};
+export default function NavBar() {
+  const classes = useStyles();
 
-export default function ButtonAppBar() {
-const classes = useStyles();
-
-return (
-    <div >
-    <AppBar style={{backgroundColor: 'white'}}>
-        <Toolbar >
-        <Typography className={classes.title}>
+  return (
+    <div className={classes.root}>
+      {/* <AppBar position="static" color="white">
+        <Toolbar style={{marginLeft:'8%', marginRight:'8%'}}>
+          <h2 className={classes.title}>
             MyClinic
-        </Typography>
-        
-        <Popup trigger={<Button variant="h3" className={classes.signInBtn}>Sign In</Button>} 
-                modal contentStyle={contentStyle2}>
-                  {close => <SignIn close={close} />}
-        </Popup>
-
-        <Button variant="h3" className={classes.signUpBtn}>Sign Up</Button>
+          </h2>
         </Toolbar>
-    </AppBar>
+      </AppBar> */}
+        <AppBar position="static" color="white">
+        <Toolbar style={{marginLeft:'2%', marginRight:'2%'}}>
+          <h2 className={classes.title1}>
+            MyClinic
+          </h2>
+        </Toolbar>
+      </AppBar>
     </div>
-);
+  );
 }

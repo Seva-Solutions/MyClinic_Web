@@ -1,13 +1,3 @@
-/* .patient {
-    position: absolute;
-    margin-top: 100;
-    top: 50%;
-    left: 50%;
-    background-color: hotpink;
-    font-size: 500;
-    /* transform: translate(-50%, -50%); 
-} */
-
 :root {
     --maincolor: #2B64D2;
     --secondarycolor: #999999;
@@ -39,7 +29,7 @@
     width: 470px;
     height: 48px;
     left: 0px;
-    margin-top: -20px;;
+    margin-top: -30px;;
     order:0;
     font-style: normal;
     font-weight: 600;
@@ -78,20 +68,19 @@
     width: 397px;
     height: 113px;
     order: 1;
-    margin-top:140px;
+    margin-top:160px;
     display: grid;
     align-content: center;
     grid-template-columns: auto auto;
     grid-gap: 30px;
     
 }
-/* 
+
 .builder{
     position: absolute;
     order:1;
     width: 550px;
     height: 550px;
     left: 600px;
-    background: url(./photo.png) no-repeat;
     background-size: contain;
-} */
+}

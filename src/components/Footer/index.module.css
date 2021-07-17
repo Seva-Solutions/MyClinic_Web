@@ -1,13 +1,12 @@
 
 
   .mainFooter{
-    margin-top: 10rem;
-    /* padding: 1rem; */
+    margin-top: 0px;
     background-color: #0DAC99;
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 8%;
+    height: 120px;
     width: 100%;
 }
 .row{

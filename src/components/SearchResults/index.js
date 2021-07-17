@@ -1,32 +1,70 @@
-import React, { Component } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import styles from './results.module.css'; 
-import Cards from '../Home/card';
+import ProfileCard from './profileCard';
+import ReactWeeklyDayPicker from './week';
+import Maps from '../GoogleMap';
 
-const Landing = () => (
-    <div className={styles.maindiv}>
-        <PageWrap/>
-    </div>
-)
-const PageWrap = () => (
-    <div>
-        <div>
-            <div className={styles.textpic}>
-                <div className={styles.textbox}>
-                    <h3 className={styles.header1}>The Official page for clinics to login to  MyClinic and view patient bookings</h3>
-                    <div className={styles.cards}>
-                        <Cards number="140" name="Clinics Across Ontario"/>
-                        <Cards number="151,416" name="Active Patients"/>
-                        <Cards number="786" name="Physicians and Specialists"/>
-                        <Cards number="100%" name="Satisfaction"/>
-                    </div>
-                    <p className={styles.p2}>MyClinic lets you skip the back and forth and choose your own appointment time</p>
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
 
-                </div>    
-                <box className={styles.builder}></box>
+const SearchResult = () => {
+    let windowSize = useWindowSize()
+    let [information, setInformation] = useState({"address":'Where is your project?'});
+    const containerStyle={
+        width: '100%',
+        height: '100%',
+        marginLeft:'auto',
+        marginRight:'auto',
+    }
+    return(
+    <div className={styles.div1}>
+        <div className={styles.div2}>
+            <div className={styles.div3}>
+                <ReactWeeklyDayPicker
+                    beforeToday={false}
+                    selectedDays={[new Date()]}
+                    multipleDaySelect={false}
+               />
+            </div>
+            <div className={styles.div4}> 
+                <ProfileCard 
+                    name="Dr. Prawesh Gaire" 
+                    title="MD" 
+                    clinicName="Deer Lake Stanford Clinic"
+                    address={"1235 Deer Lake Ave. \n Oakville, ON \n L6T 5E4"}
+                    distance={'5 km'}
+                />
+                <ProfileCard 
+                    name="Dr. Prawesh Gaire" 
+                    title="MD" 
+                    clinicName="Deer Lake Stanford Clinic"
+                    address={"1235 Deer Lake Ave. \n Oakville, ON \n L6T 5E4"}
+                    distance={'5 km'}
+                />
+                <ProfileCard 
+                    name="Dr. Prawesh Gaire" 
+                    title="MD" 
+                    clinicName="Deer Lake Stanford Clinic"
+                    address={"1235 Deer Lake Ave. \n Oakville, ON \n L6T 5E4"}
+                    distance={'5 km'}
+                />
             </div>
         </div>
+        <div className={styles.div5}>
+        <Maps information={information} setLocation={setInformation} geoStyle={windowSize[0]>1171?styles.geoStyle:styles.geoStyle2} containerStyle={containerStyle}/>
+        </div>
     </div>
-)
+    )
+}
 
-export default Landing;
-export {Landing}; 
+export default SearchResult;

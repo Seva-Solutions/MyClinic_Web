@@ -1,0 +1,43 @@
+.div1{
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    height:auto;
+    width:100%;
+    min-width: 700px;
+}
+.div2{
+    width:40%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+}
+.div3{
+    height:auto;
+    display: flex;
+    flex-direction: row;
+}
+.div4{
+    width:auto;
+    margin-left: 50px;
+}
+.div5{
+    height:auto;
+}
+.div6{
+    height: 100%;
+}
+.image{
+    height: 130px;
+    width:130px;
+    object-fit: contain;
+    border-radius: 50%;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+.geoStyle{
+    height:50vh;
+    width:100%;
+}

@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    height:calc(100% - 190px);
+    height:100%;
     width:100%;
     min-width: 700px;
 }
@@ -68,85 +68,93 @@
     align-self: center;
 }
 .tag{
-    background:#0DAC99;
-    color: white;
-    margin:5px 1px;
-    height:30px;
-    width:100%;
-    text-align: center;
-    border-radius: 5px;
-    padding-top: 5px;
-    /* font-size: 13px;
-    flex-wrap: wrap; */
+  background:#0DAC99;
+  color: white;
+  margin:5px 1px;
+  height:30px;
+  width:100%;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 5px;
+  /* font-size: 13px;
+  flex-wrap: wrap; */
 }
 @media only screen and (max-width: 1170px) {
-    .div1{
-        flex-direction: column-reverse;
-    }
-    .div5{
-        height:40%;
-        width:100%;
-    }
-    .div2{
-        height: 60%;
-        width:100%;
-    }
+  .div1{
+      flex-direction: column-reverse;
+  }
+  .div5{
+      height:40%;
+      width:100%;
+  }
+  .div2{
+      height: 60%;
+      width:100%;
+  }
 }
 @media only screen and (min-width: 2500px) {
-    .div5{
-        width: calc(100% - 1500px)
-    }
-    }
-    .geoStyle{
-        height:80vh;
-        width:100%;
-    }
-    .geoStyle2{
-        height:32vh;
-        width:100%;
-    }
-    .containerStyle{
-        width: 100px;
-        height: 100px;
+  .div5{
+      width: calc(100% - 1500px)
+  }
+}
+.geoStyle{
+    height:80vh;
+    width:100%;
+}
+.geoStyle2{
+    height:32vh;
+    width:100%;
+}
+.containerStyle{
+    width: 100px;
+    height: 100px;
 }
 @media only screen and (max-width: 1400px){
-    .cardDiv4{
-      width: 45px;
-    }
-    .cardDiv3 {
-      width: 45%;
-    }
+  .cardDiv4{
+    width: 45px;
+  }
+  .cardDiv3 {
+    width: 45%;
+  }
 
+}
+@media only screen and (max-width: 1270px) {
+  .cardDiv4{
+    width: 40px;
   }
-  @media only screen and (max-width: 1270px) {
-    .cardDiv4{
-      width: 40px;
-    }
-    .cardDiv3 {
-      width: 300px;
-    }
+  .cardDiv3 {
+    width: 300px;
   }
-  @media only screen and (max-width: 1170px) {
-    .cardDiv4{
-      width: 60px;
-    }
-    .cardDiv3 {
-      width: 50%;
-    }
+}
+@media only screen and (max-width: 1170px) {
+  .cardDiv4{
+    width: 60px;
   }
-  @media only screen and (max-width: 835px){
-    .cardDiv4{
-      width: 45px;
-    }
-    .cardDiv3 {
-      width: 45%;
-    }
+  .cardDiv3 {
+    width: 50%;
   }
-  @media only screen and (max-width: 720px) {
-    .cardDiv4{
-      width: 40px;
-    }
-    .cardDiv3 {
-      width: 300px;
-    }
+}
+@media only screen and (max-width: 835px){
+  .cardDiv4{
+    width: 45px;
   }
+  .cardDiv3 {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .cardDiv4{
+    width: 40px;
+  }
+  .cardDiv3 {
+    width: 300px;
+  }
+}
+
+.link{
+  position: static;
+  margin-bottom:15px;
+  margin-right: 10px;
+  align-self: flex-end;
+  color: black;
+}

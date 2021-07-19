@@ -8,6 +8,7 @@ import NotFound from '../Notfound/pageNotFound';
 import Footer from '../Footer/footer.js';
 import NavBar from '../Navbar';
 import SearchResults from '../SearchResults';
+import DocProfile from '../docProfile';
 
 const App = () => (
     
@@ -15,10 +16,11 @@ const App = () => (
         <NavBar/>
         <Route path='/landing' component={Landing} />
         <Route path='/searchresults' component={SearchResults} />
+        <Route path='/docProfile' component={DocProfile} />
         <Route exact path="/">
             <Redirect to="/Landing" />
         </Route>
-        <Footer />
+        {/* <Footer /> */}
     </Router>
 );
    

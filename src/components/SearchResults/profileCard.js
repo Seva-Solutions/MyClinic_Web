@@ -29,6 +29,7 @@ const ProfileCard = (props) => {
         return tempList;
     }
     return(
+    <>
     <div className={styles.cardDiv1}>
         <div className={styles.cardDiv2}>
             <div>
@@ -49,6 +50,8 @@ const ProfileCard = (props) => {
             <div className={styles.cardDiv4}>{TimeTag(day7)}</div>
         </div>
     </div>
+    <a className={styles.link}>See all availabilities...</a>
+    </>
     )
 }
 

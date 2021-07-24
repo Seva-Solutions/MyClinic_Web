@@ -1,12 +1,12 @@
 import React, { useLayoutEffect, useState } from 'react';
 import styles from './docProfile.module.css'; 
 import Image from '../SearchResults/profile.jpg';
-import Maps from '../GoogleMap';
+import Maps from './map';
+import Calendar from './calendar';
 
 const DocProfile = () => {
     const address = "1235 Deer Lake Ave. \n Oakville, ON \n L6T 5E4";
     const splittedAddress = address.split('\n').map(str => <p style={{lineHeight:'14px', padding:'0px', margin:'1px'}}>{str}</p>);
-    let [information, setInformation] = useState({"address":'Where is your project?'});
     const containerStyle={
         width: '100%',
         height: '100%',
@@ -31,11 +31,11 @@ const DocProfile = () => {
             </div>
             <div className={styles.div6}>
                 <h2>Office Location</h2>
-                <Maps information={information} setLocation={setInformation} geoStyle={styles.geoStyle} containerStyle={containerStyle}/>
+                <Maps lat={43.59230} lon={-79.66862} geoStyle={styles.geoStyle} containerStyle={containerStyle}/>
             </div>
         </div>
         <div className={styles.div7}>
-            Calendar
+            <Calendar />
         </div>
     </div>
     )
